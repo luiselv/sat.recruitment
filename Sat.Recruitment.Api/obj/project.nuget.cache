@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wo8y/H9f1aDeDYYgXVVAo6t8/K2p+ufBNepZ4mTubRZ/g8GeiAQJNlfzpiClDutYdEfd3FQMgQ6ai+fm1cBmFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Api\\Sat.Recruitment.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luise\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\luise\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\luise\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\luise\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\luise\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\luise\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
