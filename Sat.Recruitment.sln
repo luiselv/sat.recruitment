@@ -1,11 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30709.64
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sat.Recruitment.Api", "Sat.Recruitment.Api\Sat.Recruitment.Api.csproj", "{1F342EA2-E7B1-4E53-AB93-9C62288D3FB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.Test", "Sat.Recruitment.Test\Sat.Recruitment.Test.csproj", "{42E696E9-2672-4B91-AD96-353A69F7219C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sat.Recruitment.Test", "Sat.Recruitment.Test\Sat.Recruitment.Test.csproj", "{42E696E9-2672-4B91-AD96-353A69F7219C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.BL", "Sat.Recruitment.BL\Sat.Recruitment.BL.csproj", "{1A2376FA-1F3B-4A1A-B43E-A12FC48F55FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.DAL", "Sat.Recruitment.DAL\Sat.Recruitment.DAL.csproj", "{A758920E-7D5D-4EF5-BE8F-28727CB69B5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.Entities", "Sat.Recruitment.Entities\Sat.Recruitment.Entities.csproj", "{E48B50D0-7582-4199-ADFD-C3CAE33054F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.Interfaces", "Sat.Recruitment.Interfaces\Sat.Recruitment.Interfaces.csproj", "{DE7ADE9C-F416-456D-9D97-AFBEA22C6204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sat.Recruitment.DAL.File", "Sat.Recruitment.DAL.File\Sat.Recruitment.DAL.File.csproj", "{B932D7FC-ACEF-48A3-AE1A-F29EF1552010}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +31,26 @@ Global
 		{42E696E9-2672-4B91-AD96-353A69F7219C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E696E9-2672-4B91-AD96-353A69F7219C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E696E9-2672-4B91-AD96-353A69F7219C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2376FA-1F3B-4A1A-B43E-A12FC48F55FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2376FA-1F3B-4A1A-B43E-A12FC48F55FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2376FA-1F3B-4A1A-B43E-A12FC48F55FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2376FA-1F3B-4A1A-B43E-A12FC48F55FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A758920E-7D5D-4EF5-BE8F-28727CB69B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A758920E-7D5D-4EF5-BE8F-28727CB69B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A758920E-7D5D-4EF5-BE8F-28727CB69B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A758920E-7D5D-4EF5-BE8F-28727CB69B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48B50D0-7582-4199-ADFD-C3CAE33054F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48B50D0-7582-4199-ADFD-C3CAE33054F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48B50D0-7582-4199-ADFD-C3CAE33054F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48B50D0-7582-4199-ADFD-C3CAE33054F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7ADE9C-F416-456D-9D97-AFBEA22C6204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7ADE9C-F416-456D-9D97-AFBEA22C6204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7ADE9C-F416-456D-9D97-AFBEA22C6204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7ADE9C-F416-456D-9D97-AFBEA22C6204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B932D7FC-ACEF-48A3-AE1A-F29EF1552010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B932D7FC-ACEF-48A3-AE1A-F29EF1552010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B932D7FC-ACEF-48A3-AE1A-F29EF1552010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B932D7FC-ACEF-48A3-AE1A-F29EF1552010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
