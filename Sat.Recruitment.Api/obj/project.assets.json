@@ -75,6 +75,68 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Sat.Recruitment.BL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Sat.Recruitment.DAL": "1.0.0",
+          "Sat.Recruitment.Entities": "1.0.0",
+          "Sat.Recruitment.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sat.Recruitment.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sat.Recruitment.BL.dll": {}
+        }
+      },
+      "Sat.Recruitment.DAL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Sat.Recruitment.DAL.File": "1.0.0",
+          "Sat.Recruitment.Entities": "1.0.0",
+          "Sat.Recruitment.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sat.Recruitment.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sat.Recruitment.DAL.dll": {}
+        }
+      },
+      "Sat.Recruitment.DAL.File/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Sat.Recruitment.Entities": "1.0.0",
+          "Sat.Recruitment.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sat.Recruitment.DAL.File.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sat.Recruitment.DAL.File.dll": {}
+        }
+      },
+      "Sat.Recruitment.Entities/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Sat.Recruitment.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sat.Recruitment.Entities.dll": {}
+        }
+      },
+      "Sat.Recruitment.Interfaces/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Sat.Recruitment.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sat.Recruitment.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sat.Recruitment.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -185,10 +247,37 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Sat.Recruitment.BL/1.0.0": {
+      "type": "project",
+      "path": "../Sat.Recruitment.BL/Sat.Recruitment.BL.csproj",
+      "msbuildProject": "../Sat.Recruitment.BL/Sat.Recruitment.BL.csproj"
+    },
+    "Sat.Recruitment.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Sat.Recruitment.DAL/Sat.Recruitment.DAL.csproj",
+      "msbuildProject": "../Sat.Recruitment.DAL/Sat.Recruitment.DAL.csproj"
+    },
+    "Sat.Recruitment.DAL.File/1.0.0": {
+      "type": "project",
+      "path": "../Sat.Recruitment.DAL.File/Sat.Recruitment.DAL.File.csproj",
+      "msbuildProject": "../Sat.Recruitment.DAL.File/Sat.Recruitment.DAL.File.csproj"
+    },
+    "Sat.Recruitment.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Sat.Recruitment.Entities/Sat.Recruitment.Entities.csproj",
+      "msbuildProject": "../Sat.Recruitment.Entities/Sat.Recruitment.Entities.csproj"
+    },
+    "Sat.Recruitment.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Sat.Recruitment.Interfaces/Sat.Recruitment.Interfaces.csproj",
+      "msbuildProject": "../Sat.Recruitment.Interfaces/Sat.Recruitment.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Sat.Recruitment.BL >= 1.0.0",
+      "Sat.Recruitment.Entities >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Swashbuckle.AspNetCore.Swagger >= 5.6.3"
     ]
@@ -219,7 +308,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj": {
+              "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj"
+            },
+            "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+              "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

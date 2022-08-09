@@ -13,27 +13,23 @@ namespace Sat.Recruitment.Test
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void CreateUser_isSuccess()
         {
             var userController = new UsersController();
-
             var result = userController.CreateUser("Mike", "mike@gmail.com", "Av. Juan G", "+349 1122354215", "Normal", "124").Result;
 
-
-            Assert.Equal(true, result.IsSuccess);
-            Assert.Equal("User Created", result.Errors);
+            Assert.True(result.IsSuccess);
+            Assert.Contains(result.Messages, "User Created");
         }
 
         [Fact]
-        public void Test2()
+        public void CreateUser_isDuplicated()
         {
             var userController = new UsersController();
+            var result = userController.CreateUser("Juan", "Juan@marmol.com", "Av. Juan G", "+5491154762312", "Normal", "1234").Result;
 
-            var result = userController.CreateUser("Agustina", "Agustina@gmail.com", "Av. Juan G", "+349 1122354215", "Normal", "124").Result;
-
-
-            Assert.Equal(false, result.IsSuccess);
-            Assert.Equal("The user is duplicated", result.Errors);
+            Assert.False(result.IsSuccess);
+            Assert.Contains(result.Messages, "The user is duplicated");
         }
     }
 }

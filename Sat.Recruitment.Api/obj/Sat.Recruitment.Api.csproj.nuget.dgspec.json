@@ -27,7 +27,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -69,6 +76,112 @@
           },
           "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj",
+        "projectName": "Sat.Recruitment.BL",
+        "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.BL\\Sat.Recruitment.BL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL\\Sat.Recruitment.DAL.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL\\Sat.Recruitment.DAL.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL.File\\Sat.Recruitment.DAL.File.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL.File\\Sat.Recruitment.DAL.File.csproj",
+        "projectName": "Sat.Recruitment.DAL.File",
+        "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL.File\\Sat.Recruitment.DAL.File.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL\\Sat.Recruitment.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL\\Sat.Recruitment.DAL.csproj",
+        "projectName": "Sat.Recruitment.DAL",
+        "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL\\Sat.Recruitment.DAL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL.File\\Sat.Recruitment.DAL.File.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.DAL.File\\Sat.Recruitment.DAL.File.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+              },
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj",
+        "projectName": "Sat.Recruitment.Entities",
+        "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj",
+        "projectName": "Sat.Recruitment.Interfaces",
+        "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Interfaces\\Sat.Recruitment.Interfaces.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj": {
+                "projectPath": "C:\\Users\\luise\\Documents\\Sat.Recruitment\\Sat.Recruitment.Entities\\Sat.Recruitment.Entities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }
