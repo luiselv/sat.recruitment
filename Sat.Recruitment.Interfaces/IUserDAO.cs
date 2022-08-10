@@ -12,5 +12,7 @@ namespace Sat.Recruitment.Interfaces
     {
         bool Create(User user);
         List<User> GetAll();
+
+        bool CheckDuplicated(string email);
     }
 }

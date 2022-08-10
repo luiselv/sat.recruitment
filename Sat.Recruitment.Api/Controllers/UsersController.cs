@@ -10,18 +10,11 @@ using Sat.Recruitment.Entities;
 
 namespace Sat.Recruitment.Api.Controllers
 {
-    public class Result
-    {
-        public bool IsSuccess { get; set; }
-        public string Messages { get; set; }
-    }
-
     [ApiController]
     [Route("[controller]")]
     public partial class UsersController : ControllerBase
     {
-        private readonly UserManagement mgt = new UserManagement();
-        private List<User> _users = new List<User>();
+        private readonly UserManagement userManagement = new UserManagement();
         private Result result;
 
         public UsersController()
@@ -32,12 +25,7 @@ namespace Sat.Recruitment.Api.Controllers
         [Route("/create-user")]
         public async Task<Result> CreateUser(string name, string email, string address, string phone, string userType, string money)
         {
-            result = ValidateErrors(name, email, address, phone, userType, money);
-
-            if (!result.IsSuccess)
-                return result;
-
-            var newUser = new User
+            User newUser = new User
             {
                 Name = name,
                 Email = email,
@@ -47,16 +35,17 @@ namespace Sat.Recruitment.Api.Controllers
                 Money = decimal.Parse(money)
             };
 
-            //Normalize email
-            newUser.Email = Util.NormalizeEmail(newUser.Email);
+            result = userManagement.ValidateErrors(newUser);
+            if (!result.IsSuccess)
+                return result;
 
-            _users = mgt.GetAll();          
+            newUser.Email = userManagement.NormalizeEmail(newUser.Email);
 
             try
             {
-                if (!mgt.CheckDuplicated(newUser))
+                if (!userManagement.CheckDuplicated(newUser.Email))
                 {
-                    if (mgt.CreateUser(newUser))
+                    if (userManagement.CreateUser(newUser))
                     {
                         return new Result()
                         {
@@ -90,49 +79,6 @@ namespace Sat.Recruitment.Api.Controllers
                     Messages = ex.Message
                 };
             }
-        }
-
-        //Validate errors
-        private Result ValidateErrors(string name, string email, string address, string phone, string userType, string money)
-        {
-            Result result = new Result
-            {
-                IsSuccess = true,
-                Messages = ""
-            };
-
-            if (name == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The name is required";
-            }
-            else if (email == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The email is required";
-            }
-            else if (address == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The address is required";
-            }
-            else if (phone == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The phone is required";
-            }
-            else if (userType == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The user type is required";
-            }
-            else if (money == null)
-            {
-                result.IsSuccess = false;
-                result.Messages += "The money is required";
-
-            }
-            return result;
         }
     }
 }

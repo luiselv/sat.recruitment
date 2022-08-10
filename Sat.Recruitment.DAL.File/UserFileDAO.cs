@@ -38,7 +38,7 @@ namespace Sat.Recruitment.DAL.File
                 string text = user.Name + "," + user.Email + "," + user.Phone + "," + user.Address + "," + user.UserType + "," + user.Money.ToString();
                 using(StreamWriter sw = new StreamWriter(path, true))
                 {
-                    sw.WriteLine(text);
+                    sw.WriteLine("\n" + text);
                 }
                 return true;
             }
@@ -71,6 +71,13 @@ namespace Sat.Recruitment.DAL.File
             }
             reader.Close();
             return list;
+        }
+
+        public bool CheckDuplicated(string email)
+        {
+            List<User> list = this.GetAll();
+
+            return list.Select(x => x.Email.Equals(email)).Contains(true);
         }
 
     }

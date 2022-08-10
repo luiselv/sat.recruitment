@@ -43,5 +43,10 @@ namespace Sat.Recruitment.DAL
         {
             return implementer.GetAll();
         }
+
+        public bool CheckDuplicated(string email)
+        {
+            return implementer.CheckDuplicated(email);
+        }
     }
 }

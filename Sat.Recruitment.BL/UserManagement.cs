@@ -69,18 +69,61 @@ namespace Sat.Recruitment.BL
             return UserDAO.Instance.GetAll();
         }
 
-        public bool CheckDuplicated(User newUser)
+        public bool CheckDuplicated(string email)
         {
             UserDAO.Instance.SetImplementer(FactoryDAO.Instance.ProduceUserDAO());
-            List<User> list = UserDAO.Instance.GetAll();
-            foreach (var user in list)
+            return UserDAO.Instance.CheckDuplicated(email);
+        }
+
+        //Validate errors
+        public Result ValidateErrors(User user)
+        {
+            Result result = new Result
             {
-                if (user.Email == newUser.Email)
-                {
-                    return true;
-                }
+                IsSuccess = true,
+                Messages = ""
+            };
+
+            if (user.Name == null)
+            {
+                result.IsSuccess = false;
+                result.Messages += "The name is required";
             }
-            return false;
+            else if (user.Email == null)
+            {
+                result.IsSuccess = false;
+                result.Messages += " The email is required";
+            }
+            else if (user.Address == null)
+            {
+                result.IsSuccess = false;
+                result.Messages += " The address is required";
+            }
+            else if (user.Phone == null)
+            {
+                result.IsSuccess = false;
+                result.Messages += " The phone is required";
+            }
+            else if (user.UserType == null)
+            {
+                result.IsSuccess = false;
+                result.Messages += " The user type is required";
+            }
+            else if (user.Money == 0)
+            {
+                result.IsSuccess = false;
+                result.Messages += " The money is required";
+
+            }
+            return result;
+        }
+
+        public string NormalizeEmail(string email)
+        {
+            var aux = email.Split(new char[] { '@' }, StringSplitOptions.RemoveEmptyEntries);
+            var atIndex = aux[0].IndexOf("+", StringComparison.Ordinal);
+            aux[0] = atIndex < 0 ? aux[0].Replace(".", "") : aux[0].Replace(".", "").Remove(atIndex);
+            return string.Join("@", new string[] { aux[0], aux[1] });
         }
     }
 }
