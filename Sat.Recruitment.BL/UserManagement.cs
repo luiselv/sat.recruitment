@@ -16,40 +16,21 @@ namespace Sat.Recruitment.BL
         public bool CreateUser(User user)
         {
             decimal money = user.Money;
+            UserTypeContext oUserType = new UserTypeContext();
             try
             {
                 switch (user.UserType)
                 {
                     case "Normal":
-                        if (money > 10 && money <= 100)
-                        {
-                            var percentage = Convert.ToDecimal(0.8);
-                            var gif = money * percentage;
-                            user.Money += gif;
-                        }
-                        if (money > 100)
-                        {
-                            var percentage = Convert.ToDecimal(0.12);
-                            var gif = money * percentage;
-                            user.Money += gif;
-                        }
+                        user.Money = oUserType.GetMoney(UserTypeContext.UserTypes.Normal, money);
                         break;
 
                     case "SuperUser":
-                        if (money > 100)
-                        {
-                            var percentage = Convert.ToDecimal(0.20);
-                            var gif = money * percentage;
-                            user.Money += gif;
-                        }
+                        user.Money = oUserType.GetMoney(UserTypeContext.UserTypes.Super, money);
                         break;
 
                     case "Premium":
-                        if (money > 100)
-                        {
-                            var gif = money * 2;
-                            user.Money += gif;
-                        }
+                        user.Money = oUserType.GetMoney(UserTypeContext.UserTypes.Premium, money);
                         break;
                 }
                 
