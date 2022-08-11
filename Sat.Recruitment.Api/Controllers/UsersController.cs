@@ -25,24 +25,24 @@ namespace Sat.Recruitment.Api.Controllers
         [Route("/create-user")]
         public async Task<Result> CreateUser(string name, string email, string address, string phone, string userType, string money)
         {
-            User newUser = new User
-            {
-                Name = name,
-                Email = email,
-                Address = address,
-                Phone = phone,
-                UserType = userType,
-                Money = decimal.Parse(money)
-            };
-
-            result = userManagement.ValidateErrors(newUser);
-            if (!result.IsSuccess)
-                return result;
-
-            newUser.Email = userManagement.NormalizeEmail(newUser.Email);
-
             try
             {
+                User newUser = new User
+                {
+                    Name = name,
+                    Email = email,
+                    Address = address,
+                    Phone = phone,
+                    UserType = userType,
+                    Money = decimal.Parse(money)
+                };
+
+                result = userManagement.ValidateErrors(newUser);
+                if (!result.IsSuccess)
+                    return result;
+
+                newUser.Email = userManagement.NormalizeEmail(newUser.Email);
+
                 if (!userManagement.CheckDuplicated(newUser.Email))
                 {
                     if (userManagement.CreateUser(newUser))

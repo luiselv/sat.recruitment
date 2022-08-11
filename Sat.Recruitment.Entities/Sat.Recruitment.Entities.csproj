@@ -41,9 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IUserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserNormal.cs" />
+    <Compile Include="UserPremium.cs" />
+    <Compile Include="UserSuper.cs" />
+    <Compile Include="UserTypeContext.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
